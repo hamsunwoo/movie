@@ -5,7 +5,9 @@ description = "영화진흥위원회 영화순위 데이터 처리"
 authors = [
     {name = "sunwoo", email = "summerham22@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "requests>=2.32.3",
+]
 requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
@@ -14,8 +16,16 @@ license = {text = "MIT"}
 [tool.pdm]
 distribution = true
 
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.3.2",
+    "pytest-cov>=5.0.0",
+]
 [project.scripts]
 mov-ping = 'mov.cli:ping'
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
 
 [project.urls]
 Homepage = "https://github.com/hamsunwoo/movie"
