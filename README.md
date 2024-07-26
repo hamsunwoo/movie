@@ -2,7 +2,11 @@
 
 ### install
 ```bash
+# main
 $ pip install git+https://github.com/hamsunwoo/movie.git
+
+# branch
+$ pip install git+https://github.com/hamsunwoo/movie.git@<BRANCH_NAME>
 ```
 
 ### start dev
