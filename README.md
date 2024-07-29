@@ -7,6 +7,7 @@ $ pip install git+https://github.com/hamsunwoo/movie.git
 
 # branch
 $ pip install git+https://github.com/hamsunwoo/movie.git@<BRANCH_NAME>
+pip install git+https://github.com/hamsunwoo/movie.git@0.2/api
 ```
 
 ### start dev
