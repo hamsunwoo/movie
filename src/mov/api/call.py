@@ -11,7 +11,7 @@ def req(load_dt="20120101"):
     print(data)
     return code, data
 
-def gen_url(load_dt="20120101"):
+def gen_url(dt="20120101"):
     base_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
     key = get_key()
     url = f"{base_url}?key={key}&targetDt={dt}"
