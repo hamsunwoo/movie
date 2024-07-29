@@ -42,6 +42,6 @@ def save2df(load_dt='20120101'):
     #dates = pd.to_datetime(current, format='%Y%m%d')
     df['load_dt'] = load_dt
     #아래 파일 저장시 load_df 기준으로 파티셔닝
-    df.to_parquet('~/data/parquet/load_dt', partition_cols=['load_dt'])
+    df.to_parquet('~/tmp/test_parquet/load_dt', partition_cols=['load_dt'])
     
     return df
