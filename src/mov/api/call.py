@@ -29,14 +29,14 @@ def req2list(load_dt='20120101'):
 
     return l
 
-def list2df(load_dt='20120101'):
-    l = req2list(load_dt)
+def list2df():
+    l = req2list()
     df = pd.DataFrame(l)
 
     return df
 
-def save2df(load_dt='20120101'):
-    df = list2df(load_dt)
+def save2df():
+    df = list2df()
     #df에 load_df 컬럼 추가 조회 일자 YYYYMMDD 형식
     #current = datetime.datetime.now()
     #dates = pd.to_datetime(current, format='%Y%m%d')
