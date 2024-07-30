@@ -1,7 +1,9 @@
 import requests
 import os
 import pandas as pd
-import datetime
+
+def echo(yaho):
+    return yaho
 
 def req(load_dt="20120101"):
     url = gen_url(load_dt)
