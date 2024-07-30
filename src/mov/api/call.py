@@ -37,9 +37,6 @@ def list2df(load_dt='20120101'):
 
 def save2df(load_dt='20120101'):
     df = list2df(load_dt)
-    #df에 load_df 컬럼 추가 조회 일자 YYYYMMDD 형식
-    #current = datetime.datetime.now()
-    #dates = pd.to_datetime(current, format='%Y%m%d')
     df['load_dt'] = load_dt
     #아래 파일 저장시 load_df 기준으로 파티셔닝
     df.to_parquet('~/tmp/test_parquet/load_dt', partition_cols=['load_dt'])
