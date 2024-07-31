@@ -9,6 +9,9 @@ def test_gen_url():
     url = gen_url()
     assert "http" in url
     assert "kobis" in url
+    d = {"multiMovieYn": "N"}
+    url = gen_url(req_val = d)
+    assert "multiMovieYn" in url
 
 def test_req():
     code, _ = req()
@@ -36,7 +39,7 @@ def test_save2df():
     df = save2df()
     assert isinstance(df, pd.DataFrame)
     assert 'load_dt' in df.columns
-   
+
 def test_echo():
     r = echo("hello")
     assert r == "hello"

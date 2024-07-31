@@ -13,10 +13,12 @@ def req(load_dt="20120101"):
     print(data)
     return code, data
 
-def gen_url(dt="20120101"):
+def gen_url(dt="20120101",req_val = {"multiMovieYn":"N"}):
     base_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
     key = get_key()
     url = f"{base_url}?key={key}&targetDt={dt}"
+    for key, value in req_val.items():
+        url = url + f"&{key}={value}"
 
     return url
 
@@ -37,7 +39,7 @@ def list2df(load_dt='20120101'):
 
     return df
 
-def save2df(load_dt='20120101'):
+def save2df(load_dt='20120101', url_param={}):
     df = list2df(load_dt)
     df['load_dt'] = load_dt
     #아래 파일 저장시 load_df 기준으로 파티셔닝
