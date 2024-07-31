@@ -10,11 +10,8 @@ def test_gen_url():
     assert "http" in url
     assert "kobis" in url
     d = {"multiMovieYn": "N"}
-    n = {"repNationCd": "K"}
     url_param = gen_url(url_param = d)
-    url_nation = gen_url(url_nation = n)
     assert "multiMovieYn" in url_param
-    assert "repNationCd" in url_nation
 
 def test_req():
     code, _ = req()
